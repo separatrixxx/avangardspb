@@ -1,22 +1,19 @@
 import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
-import { Htag } from 'components/Htag/Htag';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Logo from './logo_icon.svg';
 import Arrow from './arrow.svg';
-import { useScrollY } from 'hooks/useScrollY';
-import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
-import { Links } from 'interfaces/components.interface';
 import { useRouter } from 'next/router';
-import { setLocale } from 'helpers/locale.helper';
-import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
-import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
-import { HeaderCart } from 'components/HeaderCart/HeaderCart';
-import { getCartAll } from 'helpers/cart.helper';
-import { Cart } from 'interfaces/cart.interface';
 import cn from 'classnames';
+import { Links } from '../../interfaces/components.interface';
+import { setLocale } from '../../helpers/locale.helper';
+import { useScrollY } from '../../hooks/useScrollY';
+import { useResizeW } from '../../hooks/useResize';
+import { Htag } from '../Htag/Htag';
+import { BurgerMenu } from '../BurgerMenu/BurgenMenu';
+import { HeaderLocaleChange } from '../HeaderLocaleChange/HeaderLocaleChange';
 
 
 export const Header = ({ count }: HeaderProps): JSX.Element => {
@@ -25,11 +22,11 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
 
 	const links: Links[] = [
-		{ title: setLocale(router.locale).about.toUpperCase(), more: true },
-		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
-		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
-		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
-		{ title: setLocale(router.locale).partners.toUpperCase(), link: 'partners' },
+		{ title: 'Title1', more: true },
+		{ title: 'Title2', link: '' },
+		{ title: 'Title3', link: '' },
+		{ title: 'Title4', link: '' },
+		{ title: 'Title4', link: '' },
 	];
 
 	const [open, setOpen] = useState<boolean>(false);
@@ -100,12 +97,6 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 		variantsBlock.hidden.transition.duration = 0;
 	}
 
-	const [cart, setCart] = useState<Cart[]>([]);
-
-	useEffect(() => {
-		setCart(getCartAll());
-	}, []);
-
 	return (
 		<motion.header className={styles.header}
 			variants={variants}
@@ -150,13 +141,13 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 									transition={{ duration: 0.3 }}
 									animate={hiddenLinks ? 'active' : 'passive'}>
 									<Link href='/about'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.about_title + ' Gemuani'}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>{'Title1'}</Htag>
 									</Link>
 									<Link href='/kiwi_farm'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.kiwi_farm_title}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>{'Title2'}</Htag>
 									</Link>
 									<Link href='/culture'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.culture_history_title}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>{'Title3'}</Htag>
 									</Link>
 								</motion.div>
 							</Htag>
@@ -164,7 +155,6 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				))}
 			</motion.div>
 			<div className={styles.openOrLang}>
-				<HeaderCart count={count !== undefined ? count : cart.length} />
 				<HeaderLocaleChange />
 				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
 			</div>
