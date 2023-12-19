@@ -1,0 +1,214 @@
+.header {
+	position: fixed;
+	z-index: 2;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	padding: 10px 0 10px 0;
+
+	background: var(--second);
+	grid-template-columns: 200px auto 200px;
+	justify-items: center;
+	grid-template-areas: ". headerBlock .";
+}
+
+.logo {
+	width: 130px;
+
+	cursor: pointer;
+	justify-self: right;
+}
+
+.logo svg {
+	fill: var(--white);
+
+	transition-duration: 300ms;
+}
+
+.headerBlock {
+	display: grid;
+	gap: 40px;
+
+	align-items: center;
+	justify-items: center;
+	grid-area: headerBlock;
+}
+
+.text {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--white) !important;
+}
+
+.text:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--light) !important;
+}
+
+.textArrow {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 7px;
+
+	align-items: center;
+}
+
+.arrow {
+	display: grid;
+
+	margin-bottom: 1px;
+}
+
+.arrow > svg {
+	height: 6px;
+
+	transition-duration: 300ms;
+	fill: var(--white);
+}
+
+.textArrow:active > span > svg {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	fill: var(--light) !important;
+}
+
+.textArrow:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--white) !important;
+}
+
+.moreDiv {
+	position: relative;
+}
+
+.hiddenLinks {
+	position: absolute;
+	left: 0;
+
+	display: grid;
+
+	width: 180px !important;
+	margin-top: 180px;
+	padding: 10px 15px 10px 15px;
+
+	cursor: default;
+
+	border-radius: 10px;
+	background: var(--white);
+}
+
+.hiddenText {
+	width: fit-content;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--dark);
+}
+
+.hiddenText:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--light) !important;
+}
+
+.openOrLang {
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+
+	align-items: center !important;
+	gap: 30px;
+
+	width: 100%;
+	justify-items: end;
+}
+
+@media (min-width: 1024px) {
+	.text:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--light) !important;
+	}
+
+	.text:hover > h1 {
+		color: var(--white) !important;
+	}
+
+	.textArrow:hover > span > svg {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		fill: var(--light) !important;
+	}
+
+	.hiddenText:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--darkLight) !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		grid-template-columns: auto auto;
+		grid-template-areas:
+			". ."
+			"headerBlock headerBlock";
+	}
+
+	.headerBlock {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto;
+		gap: 0 !important;
+
+		padding: 0 0 0 20px !important;
+		justify-self: left;
+		justify-items: left;
+	}
+
+	.text {
+		margin: 10px 0 10px 0 !important;
+	}
+
+	.text:first-child {
+		margin-top: 20px !important;
+	}
+
+	.logo {
+		width: 100px;
+		height: 30px;
+
+		justify-self: left;
+
+		margin-left: 20px;
+	}
+
+	.arrow {
+		display: none;
+	}
+
+	.textArrow {
+		grid-template-columns: auto;
+	}
+
+	.hiddenLinks {
+		position: relative !important;
+
+		display: grid !important;
+
+		margin: 0;
+		margin-left: 10px;
+		padding: 0;
+
+		border-radius: 0;
+		background: none;
+	}
+
+	.hiddenText {
+		color: var(--white) !important;
+	}
+}
