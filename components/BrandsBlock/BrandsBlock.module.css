@@ -68,3 +68,16 @@
 		color: var(--primary);
 	}
 }
+
+@media (max-width: 1024px) {
+	.textDiv {
+		width: 70%;
+	}
+}
+
+
+@media (max-width: 580px) {
+	.textDiv {
+		width: 80%;
+	}
+}

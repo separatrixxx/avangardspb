@@ -21,3 +21,16 @@
 .partnersLinesBlock {
 	width: 100%;
 }
+
+@media (max-width: 1024px) {
+	.partnersText {
+		width: 70%;
+	}
+}
+
+
+@media (max-width: 580px) {
+	.partnersText {
+		width: 80%;
+	}
+}
