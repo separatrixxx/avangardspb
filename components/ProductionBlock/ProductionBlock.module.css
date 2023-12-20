@@ -100,14 +100,14 @@
 
 @media (max-width: 1024px) {
 	.productionBlock {
-		padding: 80px;
+		padding: 80px 0;
 		gap: 80px;
 	}
 }
 
 @media (max-width: 580px) {
 	.productionBlock {
-		padding: 60px;
+		padding: 60px 0;
 		gap: 60px;
 	}
 }
