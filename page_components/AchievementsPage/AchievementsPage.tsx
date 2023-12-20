@@ -37,6 +37,7 @@ export const AchievementsPage = (): JSX.Element => {
                                 width={1}
                                 height={1}
                                 unoptimized={true}
+                                priority={true}
                             />
                         </div>
                         <div className={styles.imageBlock}>
@@ -47,6 +48,7 @@ export const AchievementsPage = (): JSX.Element => {
                                 width={1}
                                 height={1}
                                 unoptimized={true}
+                                priority={true}
                             />
                         </div>
                         <div className={styles.imageBlock}>

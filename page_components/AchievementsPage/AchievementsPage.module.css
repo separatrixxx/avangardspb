@@ -69,11 +69,12 @@
 @media (max-width: 580px) {
 	.text {
 		width: 70%;
-		margin-left: 30px;
+		margin-left: 20px !important;
 	}
 
 	.imagesList {
-		margin-left: 30px;
+		width: 100%;
+		margin-left: 0 !important;
 		grid-template-columns: auto;
 	}
 

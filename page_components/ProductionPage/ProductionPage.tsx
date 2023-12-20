@@ -33,10 +33,10 @@ export const ProductionPage = (): JSX.Element => {
                         <ImageBlock image='/Production1.webp' text='Production Img' />
                     </SideBlock>
                     <br />
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text2}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text3}
                     </Htag>
                     <br />
@@ -44,7 +44,7 @@ export const ProductionPage = (): JSX.Element => {
                         <ImageBlock image='/Production2.webp' text='Production Img' />
                     </SideBlock>
                     <br />
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text5}
                     </Htag>
                     <br />
@@ -55,16 +55,16 @@ export const ProductionPage = (): JSX.Element => {
                     <SideBlock text={setLocale(router.locale).production_page.text7} side='left' isDark={false}>
                         <ImageBlock image='/Production3.webp' text='Production Img' />
                     </SideBlock>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text8}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text9}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text10}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).production_page.text11}
                     </Htag>
                 </div>

@@ -23,7 +23,6 @@
 
 @media (max-width: 580px) {
 	.text {
-		width: 70%;
-		margin-left: 30px;
+		margin-left: 20px !important;
 	}
 }

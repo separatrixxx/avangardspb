@@ -26,19 +26,19 @@ export const AboutPage = (): JSX.Element => {
                     <Htag tag='xxl' className={styles.text}>
                         {setLocale(router.locale).about}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).about_page.text1}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).about_page.text2}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).about_page.text3}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).about_page.text4}
                     </Htag>
-                    <Htag tag='l' className={styles.text}>
+                    <Htag tag='xl' className={styles.text}>
                         {setLocale(router.locale).about_page.text5}
                     </Htag>
                 </div>
