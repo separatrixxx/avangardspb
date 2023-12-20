@@ -12,6 +12,7 @@ import { Htag } from '../Htag/Htag';
 import { BurgerMenu } from '../BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from '../HeaderLocaleChange/HeaderLocaleChange';
 import cn from 'classnames';
+import { useScrollY } from '../../hooks/useScrollY';
 
 
 export const Header = (): JSX.Element => {
@@ -35,17 +36,39 @@ export const Header = (): JSX.Element => {
 
     const scrollIntoView = require('scroll-into-view');
 
-	const links: Links[] = [
-		{ title: setLocale(router.locale).about, more: true },
-		{ title: setLocale(router.locale).partners, onClick: () => scrollIntoView(partnersE, {time: 1500}) },
-		{ title: setLocale(router.locale).contacts, onClick: () => scrollIntoView(contactsE, {time: 1500}) },
-		{ title: setLocale(router.locale).shop, onClick: () => router.push('https://www.ozon.ru/seller/ooo-avangard-91321/products/', '_blank') },
-	];
-
 	const [open, setOpen] = useState<boolean>(false);
 	const [hidden, setHidden] = useState<boolean>(false);
 
+	const links: Links[] = [
+		{ title: setLocale(router.locale).about, more: true },
+		{ title: setLocale(router.locale).partners, onClick: () => {
+			scrollIntoView(partnersE, {time: 1500});
+			setOpen(false);
+			setHidden(false);
+		} },
+		{ title: setLocale(router.locale).contacts, onClick: () => {
+			scrollIntoView(contactsE, {time: 1500});
+			setOpen(false);
+			setHidden(false);
+		} },
+		{ title: setLocale(router.locale).shop, onClick: () => {
+			router.push('https://www.ozon.ru/seller/ooo-avangard-91321/products/', '_blank');
+			setOpen(false);
+			setHidden(false);
+		} },
+	];
+
+	const scrollPosition = useScrollY();
 	const width = useResizeW();
+
+	const [lastScroll, setLastScroll] = useState<number>(0);
+
+	if (scrollPosition - lastScroll >= 200 && scrollPosition > lastScroll) {
+		setOpen(false);
+		setLastScroll(scrollPosition);
+	} else if (scrollPosition < lastScroll) {
+		setLastScroll(scrollPosition);
+	}
 
 	const variantsBlock = {
 		visible: {
@@ -129,13 +152,25 @@ export const Header = (): JSX.Element => {
 									initial={hiddenLinks ? 'active' : 'passive'}
 									transition={{ duration: 0.3 }}
 									animate={hiddenLinks ? 'active' : 'passive'}>
-									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(productionE, {time: 1500})}>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => {
+										scrollIntoView(productionE, {time: 1500});
+										setOpen(false);
+										setHidden(false);
+									}}>
 										{setLocale(router.locale).production}
 									</Htag>
-									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(brandsE, {time: 1500})}>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => {
+										scrollIntoView(brandsE, {time: 1500});
+										setOpen(false);
+										setHidden(false);
+									}}>
 										{setLocale(router.locale).brands}
 									</Htag>
-									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(achievementsE, {time: 1500})}>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => {
+										scrollIntoView(achievementsE, {time: 1500});
+										setOpen(false);
+										setHidden(false);
+									}}>
 										{setLocale(router.locale).achievements}
 									</Htag>
 								</motion.div>
