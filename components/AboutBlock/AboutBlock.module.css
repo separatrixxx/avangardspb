@@ -189,6 +189,23 @@
 	.learnMore {
 		font-size: 10px;
 	}
+
+	.square1 {
+		width: 20%;
+		height: 10%;
+	}
+	
+	.square2 {
+		width: 12%;
+		height: 7%;
+	}
+	
+	.square3 {
+		right: 5%;
+
+		width: 7%;
+		height: 5%;
+	}
 }
 
 @media (max-width: 300px) {
