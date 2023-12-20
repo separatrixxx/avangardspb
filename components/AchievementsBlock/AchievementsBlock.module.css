@@ -43,3 +43,17 @@
 		background: var(--primary);
 	}
 }
+
+@media (max-width: 1024px) {
+	.achievementsBlock {
+		padding: 80px;
+		gap: 80px;
+	}
+}
+
+@media (max-width: 580px) {
+	.achievementsBlock {
+		padding: 60px;
+		gap: 60px;
+	}
+}

@@ -101,7 +101,7 @@ export const BrandsBlock = (): JSX.Element => {
 			<div className={styles.textDiv}
 				onMouseOver={() => setActive(true)}
 				onMouseOut={() => setActive(false)}>
-				<Htag tag='l' className={styles.brandsText}>
+				<Htag tag='xl' className={styles.brandsText}>
 					{setLocale(router.locale).brands_text}
 				</Htag>
 			</div>

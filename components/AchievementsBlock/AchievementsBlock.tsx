@@ -17,7 +17,7 @@ export const AchievementsBlock = (): JSX.Element => {
             <SideBlock text={setLocale(router.locale).achievements_text} side='right' isDark={true}>
                 <ImageBlock image='/AchievementsImg.webp' text='Achievements Img' />
             </SideBlock>
-            <Htag tag='m' className={styles.learnMore} onClick={() => router.push('/achievements')}>
+            <Htag tag='l' className={styles.learnMore} onClick={() => router.push('/achievements')}>
                 {setLocale(router.locale).learn_more}
             </Htag>
         </div>

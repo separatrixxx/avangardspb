@@ -27,7 +27,7 @@ export const PartnersBlock = (): JSX.Element => {
             <Htag tag='xxl'>
                 {setLocale(router.locale).partners}
             </Htag>
-            <Htag tag='l' className={styles.partnersText}>
+            <Htag tag='xl' className={styles.partnersText}>
                 {setLocale(router.locale).partners_text}
             </Htag>
             <div className={styles.partnersLinesBlock}>

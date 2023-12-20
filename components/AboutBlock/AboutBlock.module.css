@@ -42,8 +42,8 @@
 
 	color: var(--second);
 
-	font-size: 16px;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 500;
 	font-style: normal;
 	line-height: normal;
 }
@@ -165,10 +165,11 @@
 @media (max-width: 1024px) {
 	.aboutText {
 		font-size: 32px;
+		width: 70%;
 	}
 
 	.learnMore {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
@@ -182,10 +183,11 @@
 @media (max-width: 580px) {
 	.aboutText {
 		font-size: 20px;
+		width: 75%;
 	}
 
 	.learnMore {
-		font-size: 8px;
+		font-size: 10px;
 	}
 }
 

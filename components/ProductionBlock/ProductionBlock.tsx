@@ -17,7 +17,7 @@ export const ProductionBlock = (): JSX.Element => {
             <SideBlock text={setLocale(router.locale).production_text} side='left' isDark={true}>
                 <ImageBlock image='/ProductionImg.webp' text='Production Img' />
             </SideBlock>
-            <Htag tag='m' className={styles.learnMore} onClick={() => router.push('/production')}>
+            <Htag tag='l' className={styles.learnMore} onClick={() => router.push('/production')}>
                 {setLocale(router.locale).learn_more}
             </Htag>
             <span className={styles.square1} />

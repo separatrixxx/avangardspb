@@ -9,7 +9,7 @@ export const SideBlock = ({ text, side, isDark, children }: SideBlockProps): JSX
         <div className={cn(styles.sideBlock, {
             [styles.leftSide]: side === 'left',
         })}>
-            <Htag tag='l' className={cn(styles.text, {
+            <Htag tag='xl' className={cn(styles.text, {
                 [styles.dark]: isDark,
             })}>
                 {text}

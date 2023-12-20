@@ -13,13 +13,13 @@ export const ContactsBlock = (): JSX.Element => {
                 {setLocale(router.locale).contacts}
             </Htag>
             <div className={styles.contactsDiv}>
-                <Htag tag='m'>
+                <Htag tag='xl'>
                     {setLocale(router.locale).contacts_text}
                 </Htag>
-                <Htag tag='m' className={styles.contact}>
+                <Htag tag='l' className={styles.contact}>
                     +995 599 88 90 90 
                 </Htag>
-                <Htag tag='m' className={styles.contact}>
+                <Htag tag='l' className={styles.contact}>
                     tamo7373@mail.ru
                 </Htag>
             </div>
