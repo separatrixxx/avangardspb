@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:title' content='Avanfardspb - только самые лучшие салфетки' />
         <meta property='og:description' content='Avanfardspb - только самые лучшие салфетки' />
         <meta charSet="utf-8" />
-        <link rel="icon" href="/vercel.svg" type='image/svg+xml' />
+        <link rel="icon" href="/avangard.png" type='image/png' />
       </Head>
       <Component {...pageProps} />
     </>

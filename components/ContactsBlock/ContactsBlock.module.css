@@ -1,0 +1,32 @@
+.contactsBlock {
+	position: relative;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+	margin-bottom: 60px;
+	padding: 60px 0;
+	justify-items: center;
+	grid-template-rows: 1fr auto;
+	gap: 60px;
+}
+
+.contactsText {
+	width: 60%;
+
+	text-align: center;
+}
+
+.contactsDiv {
+	display: grid;
+
+	width: 100%;
+	grid-template-columns: auto;
+	justify-items: center;
+}
+
+.contact {
+	font-weight: 500;
+}

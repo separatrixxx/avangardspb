@@ -8,7 +8,8 @@
 	width: 100%;
 	padding: 10px 0 10px 0;
 
-	background: var(--second);
+	background: var(--white);
+
 	grid-template-columns: 200px auto 200px;
 	justify-items: center;
 	grid-template-areas: ". headerBlock .";
@@ -40,13 +41,13 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	color: var(--white) !important;
+	color: var(--primary) !important;
 }
 
 .text:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--light) !important;
+	color: var(--second) !important;
 }
 
 .textArrow {
@@ -67,13 +68,13 @@
 	height: 6px;
 
 	transition-duration: 300ms;
-	fill: var(--white);
+	fill: var(--primary);
 }
 
 .textArrow:active > span > svg {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	fill: var(--light) !important;
+	fill: var(--primary) !important;
 }
 
 .textArrow:active {
@@ -108,13 +109,13 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	color: var(--dark);
+	color: var(--dark) !important;
 }
 
 .hiddenText:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--light) !important;
+	color: var(--second) !important;
 }
 
 .openOrLang {
@@ -132,7 +133,7 @@
 	.text:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--light) !important;
+		color: var(--second) !important;
 	}
 
 	.text:hover > h1 {
@@ -142,13 +143,13 @@
 	.textArrow:hover > span > svg {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		fill: var(--light) !important;
+		fill: var(--primary) !important;
 	}
 
 	.hiddenText:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--darkLight) !important;
+		color: var(--second) !important;
 	}
 }
 
@@ -209,6 +210,6 @@
 	}
 
 	.hiddenText {
-		color: var(--white) !important;
+		color: var(--primary) !important;
 	}
 }

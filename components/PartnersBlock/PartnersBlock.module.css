@@ -1,0 +1,23 @@
+.partnersBlock {
+	position: relative;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+	padding: 60px 0;
+	justify-items: center;
+	grid-template-rows: 1fr auto;
+	gap: 60px;
+}
+
+.partnersText {
+	width: 60%;
+
+	text-align: center;
+}
+
+.partnersLinesBlock {
+	width: 100%;
+}

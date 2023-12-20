@@ -25,9 +25,7 @@ export const HeaderLocaleChange = (): JSX.Element => {
     let locale: string;
 
     if (router.locale === 'ru') {
-        locale = 'Rus';
-    } else if (router.locale === 'ka') {
-        locale = 'Geo';
+        locale = 'Рус';
     } else {
         locale = 'Eng';
     }

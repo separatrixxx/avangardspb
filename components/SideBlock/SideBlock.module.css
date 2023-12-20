@@ -1,0 +1,47 @@
+.sideBlock {
+	display: grid;
+	align-items: center;
+
+	width: 60%;
+	height: fit-content;
+	grid-template-columns: auto auto;
+	gap: 60px;
+	grid-template-areas: "a .";
+}
+
+.leftSide {
+	grid-template-areas: ". a";
+}
+
+.text {
+	text-align: center;
+
+	color: var(--dark);
+	grid-area: a;
+}
+
+.dark {
+	color: var(--white);
+}
+
+@media (max-width: 1200px) {
+	.sideBlock {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.sideBlock {
+		width: 75%;
+	}
+}
+
+@media (max-width: 780px) {
+	.sideBlock {
+		justify-items: center;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"."
+			"a" !important;
+	}
+}

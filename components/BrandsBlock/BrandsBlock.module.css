@@ -1,0 +1,70 @@
+.brandsBlock {
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+	padding: 120px 0;
+
+	cursor: none;
+	justify-items: center;
+	grid-template-rows: 1fr auto;
+}
+
+.textDiv {
+	display: grid;
+
+	width: 60%;
+	justify-items: center;
+}
+
+.brandsText {
+	width: 100%;
+
+	transition-duration: 300ms;
+	text-align: center;
+}
+
+.brandsText:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+.cursor,
+.aura {
+	position: absolute;
+
+	user-select: none;
+	pointer-events: none;
+
+	border-radius: 100%;
+}
+
+.cursor {
+	z-index: 20000;
+
+	width: 8px;
+	height: 8px;
+
+	background: rgba(0, 136, 255, 0.5);
+}
+
+.aura {
+	z-index: 19999;
+
+	width: 46px;
+	height: 46px;
+
+	transform: translate(5px, 5px);
+
+	background: rgba(0, 106, 255, 0.2);
+}
+
+@media (min-width: 1024px) {
+	.brandsText:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}

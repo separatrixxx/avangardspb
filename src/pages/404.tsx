@@ -7,7 +7,7 @@ function PageNotFound(): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>{'MOEX Hack - 404'}</title>
+				<title>{'Avangardspb - 404'}</title>
 			</Head>
 			<ErrorPage error={404} />
 		</>

@@ -1,0 +1,45 @@
+.achievementsBlock {
+	position: relative;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+	padding: 100px 0;
+
+	background: var(--dark);
+	justify-items: center;
+	grid-template-rows: auto 1fr;
+	gap: 100px;
+}
+
+.achievementsTitle {
+	color: var(--white);
+}
+
+.learnMore {
+	padding: 20px 30px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--second);
+	border-radius: 9999px;
+}
+
+.learnMore:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--white);
+	background: var(--primary);
+}
+
+@media (min-width: 1024px) {
+	.learnMore:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--white);
+		background: var(--primary);
+	}
+}

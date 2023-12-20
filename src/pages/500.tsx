@@ -6,7 +6,7 @@ function PageServerFailure(): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>{'MOEX Hack - 500'}</title>
+				<title>{'Avangardspb - 500'}</title>
 			</Head>
 			<ErrorPage error={500} />
 		</>

@@ -1,59 +1,51 @@
-import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Logo from './logo_icon.svg';
+import Logo from './logo.svg';
 import Arrow from './arrow.svg';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import cn from 'classnames';
 import { Links } from '../../interfaces/components.interface';
 import { setLocale } from '../../helpers/locale.helper';
-import { useScrollY } from '../../hooks/useScrollY';
 import { useResizeW } from '../../hooks/useResize';
 import { Htag } from '../Htag/Htag';
 import { BurgerMenu } from '../BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from '../HeaderLocaleChange/HeaderLocaleChange';
+import cn from 'classnames';
 
 
-export const Header = ({ count }: HeaderProps): JSX.Element => {
+export const Header = (): JSX.Element => {
 	const router = useRouter();
 
 	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
 
+	const [productionE, setProductionE] = useState<Element | null>(null);
+	const [brandsE, setBrandsE] = useState<Element | null>(null);
+	const [achievementsE, setAchievementsE] = useState<Element | null>(null);
+	const [partnersE, setPartnersE] = useState<Element | null>(null);
+	const [contactsE, setContactsE] = useState<Element | null>(null);
+
+    useEffect(() => {
+		setProductionE(document.getElementById('productionBlock'));
+		setBrandsE(document.getElementById('brandsBlock'));
+		setAchievementsE(document.getElementById('achievementsBlock'));
+		setPartnersE(document.getElementById('partnersBlock'));
+		setContactsE(document.getElementById('contactsBlock'));
+	}, []);
+
+    const scrollIntoView = require('scroll-into-view');
+
 	const links: Links[] = [
-		{ title: 'Title1', more: true },
-		{ title: 'Title2', link: '' },
-		{ title: 'Title3', link: '' },
-		{ title: 'Title4', link: '' },
-		{ title: 'Title4', link: '' },
+		{ title: setLocale(router.locale).about, more: true },
+		{ title: setLocale(router.locale).partners, onClick: () => scrollIntoView(partnersE, {time: 1500}) },
+		{ title: setLocale(router.locale).contacts, onClick: () => scrollIntoView(contactsE, {time: 1500}) },
+		{ title: setLocale(router.locale).shop, onClick: () => router.push('https://www.ozon.ru/seller/ooo-avangard-91321/products/', '_blank') },
 	];
 
 	const [open, setOpen] = useState<boolean>(false);
-	const [lastScroll, setLastScroll] = useState<number>(0);
-	const [flag, setFlag] = useState<boolean>(false);
 	const [hidden, setHidden] = useState<boolean>(false);
 
-	const scrollPosition = useScrollY();
 	const width = useResizeW();
-
-	if (scrollPosition - lastScroll >= 200 && scrollPosition > lastScroll) {
-		setOpen(false);
-		setFlag(true);
-		setLastScroll(scrollPosition);
-	} else if (scrollPosition < lastScroll) {
-		setFlag(false);
-		setLastScroll(scrollPosition);
-	}
-
-	const variants = {
-		visible: {
-			transform: 'translate(0%, 0%)',
-		},
-		hidden: {
-			transform: 'translate(0%, -100%)',
-		}
-	};
 
 	const variantsBlock = {
 		visible: {
@@ -98,11 +90,7 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 	}
 
 	return (
-		<motion.header className={styles.header}
-			variants={variants}
-			initial={flag ? 'hidden' : 'visible'}
-			transition={{ duration: 0.3 }}
-			animate={flag ? 'hidden' : 'visible'}>
+		<header className={styles.header}>
 			<Link href='/' className={styles.logo} aria-label="Go Home"><Logo /></Link>
 			<motion.div className={styles.headerBlock}
 				variants={variantsBlock}
@@ -111,9 +99,10 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				style={width > 1024 ? { gridTemplateColumns: `repeat(${links.length}, auto)` } : { gridTemplateRows: `repeat(${links.length}, auto)` }}>
 				{links.map(l => (
 					!l.more ?
-						<Link href={"/" + l.link} key={l.link} style={hidden ? { display: 'none' } : { display: 'block' }}>
-							<Htag tag='m' className={styles.text}>{l.title}</Htag>
-						</Link>
+						<Htag tag='m' className={styles.text} key={l.title} style={hidden ? { display: 'none' } : { display: 'block' }}
+							onClick={l.onClick}>
+							{l.title}
+						</Htag>
 						:
 						<div key={'u' + l.link} className={styles.moreDiv}
 							onMouseOver={() => {
@@ -133,22 +122,22 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 									initial={!hiddenLinks ? 'active' : 'passive'}
 									transition={{ duration: 0.3 }}
 									animate={!hiddenLinks ? 'active' : 'passive'}>
-									< Arrow />
+									<Arrow />
 								</motion.span>
 								<motion.div className={styles.hiddenLinks}
 									variants={variantsHiddenDiv}
 									initial={hiddenLinks ? 'active' : 'passive'}
 									transition={{ duration: 0.3 }}
 									animate={hiddenLinks ? 'active' : 'passive'}>
-									<Link href='/about'>
-										<Htag tag='m' className={styles.hiddenText}>{'Title1'}</Htag>
-									</Link>
-									<Link href='/kiwi_farm'>
-										<Htag tag='m' className={styles.hiddenText}>{'Title2'}</Htag>
-									</Link>
-									<Link href='/culture'>
-										<Htag tag='m' className={styles.hiddenText}>{'Title3'}</Htag>
-									</Link>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(productionE, {time: 1500})}>
+										{setLocale(router.locale).production}
+									</Htag>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(brandsE, {time: 1500})}>
+										{setLocale(router.locale).brands}
+									</Htag>
+									<Htag tag='m' className={styles.hiddenText} onClick={() => scrollIntoView(achievementsE, {time: 1500})}>
+										{setLocale(router.locale).achievements}
+									</Htag>
 								</motion.div>
 							</Htag>
 						</div>
@@ -158,6 +147,6 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				<HeaderLocaleChange />
 				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
 			</div>
-		</motion.header>
+		</header>
 	);
 };
