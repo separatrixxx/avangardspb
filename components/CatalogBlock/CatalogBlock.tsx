@@ -19,6 +19,8 @@ export const CatalogBlock = (): JSX.Element => {
 
     const width = useResizeW();
 
+    console.log(width)
+
     const catalog1: Catalog = {
         image: '/CatalogImg1.webp',
         title: setLocale(router.locale).catalog_page.title1,
@@ -106,7 +108,7 @@ export const CatalogBlock = (): JSX.Element => {
             <Htag tag='xxl' className={styles.catalogTitle}>
                 {setLocale(router.locale).catalog}
             </Htag>
-            <Swiper className={styles.swiper} style={{ width: width - 9 }}
+            <Swiper className={styles.swiper} style={{ width: width * 0.99 }}
                 modules={[Pagination, A11y, Autoplay, Navigation]}
                 spaceBetween={20}
                 slidesPerView={ width > 1024 ? 3 : width > 580 ? 2 : 1 }
