@@ -23,6 +23,7 @@ export const Header = (): JSX.Element => {
 	const [productionE, setProductionE] = useState<Element | null>(null);
 	const [brandsE, setBrandsE] = useState<Element | null>(null);
 	const [achievementsE, setAchievementsE] = useState<Element | null>(null);
+	const [catalogE, setCatalogE] = useState<Element | null>(null);
 	const [partnersE, setPartnersE] = useState<Element | null>(null);
 	const [contactsE, setContactsE] = useState<Element | null>(null);
 
@@ -30,6 +31,7 @@ export const Header = (): JSX.Element => {
 		setProductionE(document.getElementById('productionBlock'));
 		setBrandsE(document.getElementById('brandsBlock'));
 		setAchievementsE(document.getElementById('achievementsBlock'));
+		setCatalogE(document.getElementById('catalogBlock'));
 		setPartnersE(document.getElementById('partnersBlock'));
 		setContactsE(document.getElementById('contactsBlock'));
 	}, []);
@@ -41,6 +43,11 @@ export const Header = (): JSX.Element => {
 
 	const links: Links[] = [
 		{ title: setLocale(router.locale).about, more: true },
+		{ title: setLocale(router.locale).catalog, onClick: () => {
+			scrollIntoView(catalogE, {time: 1500});
+			setOpen(false);
+			setHidden(false);
+		} },
 		{ title: setLocale(router.locale).partners, onClick: () => {
 			scrollIntoView(partnersE, {time: 1500});
 			setOpen(false);

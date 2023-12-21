@@ -10,7 +10,7 @@ function About(): JSX.Element {
     return (
       <>
         <Head>
-            <title>{'Avanfardspb - ' + setLocale(router.locale).about}</title>
+            <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).about}</title>
             <meta name='description' content={'Avanfardspb - ' + setLocale(router.locale).about} />
             <meta property='og:title' content={'Avanfardspb - ' + setLocale(router.locale).about} />
             <meta property='og:description' content={'Avanfardspb - ' + setLocale(router.locale).about} />

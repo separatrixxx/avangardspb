@@ -114,31 +114,31 @@
 	.square1 {
 		top: 0;
 		left: 0;
-	
+
 		width: 15%;
 		height: 10%;
 	}
-	
+
 	.square2 {
 		left: 15%;
-	
+
 		width: 7%;
 		height: 5%;
 	}
-	
+
 	.square3 {
 		width: 7%;
 		height: 3%;
 	}
-	
+
 	.square4 {
 		width: 10%;
 		height: 5%;
 	}
-	
+
 	.square5 {
 		right: 5%;
-	
+
 		width: 7%;
 		height: 9%;
 	}

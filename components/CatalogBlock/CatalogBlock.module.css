@@ -1,0 +1,39 @@
+.catalogBlock {
+	position: relative;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+	padding: 60px 0;
+	justify-items: center;
+	grid-template-rows: 1fr auto;
+	gap: 60px;
+
+	background: var(--white);
+}
+
+.catalogTitle {
+	color: var(--dark);
+
+	font-weight: 700;
+}
+
+.swiper {
+	z-index: 1;
+
+	display: grid;
+
+	height: fit-content;
+	justify-items: center;
+
+	background: var(--primary);
+}
+
+.swiperItem {
+	display: grid;
+	justify-items: center;
+
+	margin: 30px 0;
+}

@@ -45,6 +45,20 @@ a {
 	text-decoration: none;
 }
 
+.swiper-pagination-bullet {
+	opacity: 1 !important;
+	background-color: var(--white) !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: var(--dark) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	color: var(--dark) !important;
+}
+
 :root {
 	--primary: #00A6FF;
 	--second: #00BFFF;

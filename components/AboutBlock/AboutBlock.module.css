@@ -164,8 +164,9 @@
 
 @media (max-width: 1024px) {
 	.aboutText {
-		font-size: 32px;
 		width: 70%;
+
+		font-size: 32px;
 	}
 
 	.learnMore {
@@ -182,8 +183,9 @@
 
 @media (max-width: 580px) {
 	.aboutText {
-		font-size: 20px;
 		width: 80%;
+
+		font-size: 20px;
 	}
 
 	.learnMore {
@@ -194,12 +196,12 @@
 		width: 20%;
 		height: 10%;
 	}
-	
+
 	.square2 {
 		width: 12%;
 		height: 7%;
 	}
-	
+
 	.square3 {
 		right: 5%;
 

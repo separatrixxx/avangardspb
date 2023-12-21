@@ -27,11 +27,12 @@
 
 @media (max-width: 580px) {
 	.textDiv > div {
-		width: 100%;
 		display: grid;
+
+		width: 100%;
 		margin-left: 0;
-		justify-items: center;
 		padding: 0 10px;
+		justify-items: center;
 	}
 
 	.text {

@@ -10,7 +10,7 @@ function Achievements(): JSX.Element {
     return (
       <>
         <Head>
-            <title>{'Avanfardspb - ' + setLocale(router.locale).achievements}</title>
+            <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).achievements}</title>
             <meta name='description' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />
             <meta property='og:title' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />
             <meta property='og:description' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />

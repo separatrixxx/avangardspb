@@ -1,17 +1,21 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React from 'react';
+import { setLocale } from '../../helpers/locale.helper';
 
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  
   return (
     <>
       <Head>
-        <title>Avanfardspb - только самые лучшие салфетки</title>
-        <meta name='description' content='Avanfardspb - только самые лучшие салфетки' />
-        <meta property='og:title' content='Avanfardspb - только самые лучшие салфетки' />
-        <meta property='og:description' content='Avanfardspb - только самые лучшие салфетки' />
+        <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan}</title>
+        <meta name='description' content={setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan} />
+        <meta property='og:title' content={setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan} />
+        <meta property='og:description' content={setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan} />
         <meta charSet="utf-8" />
         <link rel="icon" href="/avangard.png" type='image/png' />
       </Head>

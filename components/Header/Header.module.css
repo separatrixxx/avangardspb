@@ -104,10 +104,10 @@
 }
 
 .hiddenText {
-	user-select: none;
 	width: fit-content;
 
 	cursor: pointer;
+	user-select: none;
 	transition-duration: 300ms;
 
 	color: var(--dark) !important;
@@ -173,8 +173,9 @@
 	}
 
 	.text {
-		user-select: none;
 		margin: 10px 0 10px 0 !important;
+
+		user-select: none;
 	}
 
 	.text:first-child {

@@ -9,6 +9,7 @@ import { AchievementsBlock } from '../../components/AchievementsBlock/Achievemen
 import { PartnersBlock } from '../../components/PartnersBlock/PartnersBlock';
 import { ContactsBlock } from '../../components/ContactsBlock/ContactsBlock';
 import { Footer } from '../../components/Footer/Footer';
+import { CatalogBlock } from '../../components/CatalogBlock/CatalogBlock';
 
 
 export const MainPage = (): JSX.Element => {
@@ -29,6 +30,7 @@ export const MainPage = (): JSX.Element => {
                 <ProductionBlock />
                 <BrandsBlock />
                 <AchievementsBlock />
+                <CatalogBlock />
                 <PartnersBlock />
                 <ContactsBlock />
                 <Footer />
