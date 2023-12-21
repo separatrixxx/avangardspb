@@ -77,6 +77,10 @@
 	.imageDiv {
 		width: 300px;
 	}
+
+	.title {
+		max-width: 300px;
+	}
 }
 
 @media (max-width: 500px) {
