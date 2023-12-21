@@ -79,7 +79,11 @@
 	}
 
 	.title {
-		max-width: 300px;
+		max-width: 200px;
+	}
+
+	.text {
+		max-width: 200px;
 	}
 }
 
