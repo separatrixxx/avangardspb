@@ -57,4 +57,5 @@ export const en = {
         title9: "Children's, 50 pcs.",
         title10: "Universal for car, 45 pcs.",
     },
+    address: "LLC «AVANGARDE GE», Georgia, Batumi St. L. Asatiani, 13, apt. 8",
 };

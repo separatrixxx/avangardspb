@@ -1,6 +1,5 @@
 import styles from './AboutBlock.module.css';
 import { setLocale } from '../../helpers/locale.helper';
-import { Htag } from '../Htag/Htag';
 import { useRouter } from 'next/router';
 import Arrow from './arrow.svg';
 import { useEffect, useState } from 'react';
@@ -15,17 +14,21 @@ export const AboutBlock = (): JSX.Element => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
+        setIsVisible(false);
 		setElement(document.getElementById('productionBlock'));
 
-        var i = 0;
-        var txt = setLocale(router.locale).about_text;
-        var speed = 50;
-
         const htag = document.getElementById('htag');
+        
+        if (htag) {
+            htag.innerHTML = '';
+        }
+
+        let i = 0;
+        let txt = setLocale(router.locale).about_text;
+        let speed = 50;
 
         typeWriter(); 
         
-
         function typeWriter() {
             if (i < txt.length && htag) {
                 htag.innerHTML += txt.charAt(i);
@@ -42,9 +45,11 @@ export const AboutBlock = (): JSX.Element => {
     const variants = {
 		visible: {
 			opacity: 1,
+            cursor: 'pointer',
 		},
 		hidden: {
 			opacity: 0,
+            cursor: 'default',
 		}
 	};
     

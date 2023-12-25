@@ -22,6 +22,9 @@ export const ContactsBlock = (): JSX.Element => {
                 <Htag tag='l' className={styles.contact}>
                     tamo7373@mail.ru
                 </Htag>
+                <Htag tag='l' className={styles.contact}>
+                    {setLocale(router.locale).address}
+                </Htag>
             </div>
         </div>
     );
