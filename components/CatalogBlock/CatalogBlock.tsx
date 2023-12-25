@@ -19,8 +19,6 @@ export const CatalogBlock = (): JSX.Element => {
 
     const width = useResizeW();
 
-    console.log(width)
-
     const catalog1: Catalog = {
         image: '/CatalogImg1.webp',
         title: setLocale(router.locale).catalog_page.title1,

@@ -15,8 +15,9 @@
 	display: grid;
 	overflow: hidden;
 
-	width: 250px;
-	height: fit-content;
+	width: 250px !important;
+	height: fit-content !important;
+	max-height: 300px;
 
 	border-radius: 7px;
 }
@@ -27,7 +28,7 @@
 }
 
 .title {
-	max-width: 400px;
+	max-width: 250px !important;
 	margin-top: 30px;
 
 	text-align: center;
