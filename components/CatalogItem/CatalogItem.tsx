@@ -23,12 +23,12 @@ export const CatalogItem = ({ image, title, art, barcode, count }: CatalogItemPr
 				/>
 			</div>
 			<Htag tag='l' className={styles.title}>{title}</Htag>
-			<Htag tag='m' className={styles.text}>
+			{/* <Htag tag='m' className={styles.text}>
 				{setLocale(router.locale).catalog_page.art + ': ' + art}
 			</Htag>
 			<Htag tag='m' className={styles.text}>
 				{setLocale(router.locale).catalog_page.barcode + ': ' +barcode}
-			</Htag>
+			</Htag> */}
 			<Htag tag='m' className={styles.text}>
 				{setLocale(router.locale).catalog_page.packages_in_box + ': ' + count}
 			</Htag>

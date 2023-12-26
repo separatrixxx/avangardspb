@@ -24,7 +24,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title1,
         art: 70900,
         barcode: 4607054709000,
-        count: 24,
+        count: 80,
     };
 
     const catalog2: Catalog = {
@@ -32,7 +32,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title2,
         art: 48706,
         barcode: 4607091487060,
-        count: 75,
+        count: 50,
     };
 
     const catalog3: Catalog = {
@@ -40,7 +40,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title3,
         art: 48119,
         barcode: 4607091481198,
-        count: 34,
+        count: 3,
     };
 
     const catalog4: Catalog = {
@@ -48,7 +48,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title4,
         art: 30646,
         barcode: 4620016306468,
-        count: 16,
+        count: 120,
     };
 
     const catalog5: Catalog = {
@@ -56,7 +56,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title5,
         art: 72178,
         barcode: 4610080721786,
-        count: 20,
+        count: 100,
     };
 
     const catalog6: Catalog = {
@@ -64,7 +64,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title6,
         art: 48118,
         barcode: 4607091481181,
-        count: 32,
+        count: 120,
     };
 
     const catalog7: Catalog = {
@@ -72,7 +72,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title7,
         art: 48330,
         barcode: 4607091483307,
-        count: 60,
+        count: 15,
     };
 
     const catalog8: Catalog = {
@@ -80,7 +80,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title8,
         art: 72354,
         barcode: 4610080723544,
-        count: 18,
+        count: 77,
     };
 
     const catalog9: Catalog = {
@@ -88,7 +88,7 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title9,
         art: 72786,
         barcode: 4610080727863,
-        count: 26,
+        count: 120,
     };
 
     const catalog10: Catalog = {
@@ -96,7 +96,47 @@ export const CatalogBlock = (): JSX.Element => {
         title: setLocale(router.locale).catalog_page.title10,
         art: 30107,
         barcode: 4620016301074,
-        count: 28,
+        count: 1,
+    };
+
+    const catalog11: Catalog = {
+        image: '/CatalogImg11.webp',
+        title: setLocale(router.locale).catalog_page.title11,
+        art: 30107,
+        barcode: 4620016301074,
+        count: 64,
+    };
+
+    const catalog12: Catalog = {
+        image: '/CatalogImg12.webp',
+        title: setLocale(router.locale).catalog_page.title12,
+        art: 30107,
+        barcode: 4620016301074,
+        count: 80,
+    };
+
+    const catalog13: Catalog = {
+        image: '/CatalogImg13.webp',
+        title: setLocale(router.locale).catalog_page.title13,
+        art: 30107,
+        barcode: 4620016301074,
+        count: 20,
+    };
+
+    const catalog14: Catalog = {
+        image: '/CatalogImg14.webp',
+        title: setLocale(router.locale).catalog_page.title14,
+        art: 30107,
+        barcode: 4620016301074,
+        count: 42,
+    };
+
+    const catalog15: Catalog = {
+        image: '/CatalogImg15.webp',
+        title: setLocale(router.locale).catalog_page.title15,
+        art: 30107,
+        barcode: 4620016301074,
+        count: 60,
     };
 
     const catalog = [catalog1, catalog2, catalog3, catalog4, catalog5, catalog6, catalog7, catalog8, catalog9, catalog10];

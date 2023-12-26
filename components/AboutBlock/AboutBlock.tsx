@@ -13,31 +13,38 @@ export const AboutBlock = (): JSX.Element => {
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
+    let i = 0;
+    const txt = setLocale(router.locale).about_text;
+    const speed = 50;
+
     useEffect(() => {
         setIsVisible(false);
 		setElement(document.getElementById('productionBlock'));
 
         const htag = document.getElementById('htag');
-        
+        let timerId: any;
+
         if (htag) {
             htag.innerHTML = '';
+            console.log(1);
+
+            timerId = setInterval(() => {
+                if (i < txt.length) {
+                    htag.innerHTML += txt.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timerId);
+                    setIsVisible(true);
+                }
+            }, speed);
         }
 
-        let i = 0;
-        let txt = setLocale(router.locale).about_text;
-        let speed = 50;
-
-        typeWriter(); 
-        
-        function typeWriter() {
-            if (i < txt.length && htag) {
-                htag.innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
+        return () => {
+            if (timerId) {
+                clearInterval(timerId);
             }
-        }
-
-        setTimeout(() => setIsVisible(true), 4000);
+        };
+        
 	}, [router]);
 
     const scrollIntoView = require('scroll-into-view');
