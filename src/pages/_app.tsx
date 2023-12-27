@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:title' content={setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan} />
         <meta property='og:description' content={setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).slogan} />
         <meta charSet="utf-8" />
+        <meta name="yandex-verification" content="5344a215c217462e" />
         <link rel="icon" href="/avangard.png" type='image/png' />
       </Head>
       <Component {...pageProps} />
