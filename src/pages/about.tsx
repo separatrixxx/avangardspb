@@ -9,14 +9,14 @@ function About(): JSX.Element {
     
     return (
       <>
-        <Head>
+        {/* <Head>
             <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).about}</title>
             <meta name='description' content={'Avanfardspb - ' + setLocale(router.locale).about} />
             <meta property='og:title' content={'Avanfardspb - ' + setLocale(router.locale).about} />
             <meta property='og:description' content={'Avanfardspb - ' + setLocale(router.locale).about} />
             <meta charSet="utf-8" />
         </Head>
-        <AboutPage />
+        <AboutPage /> */}
       </>
     );
 }

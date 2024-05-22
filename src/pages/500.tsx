@@ -9,10 +9,10 @@ function PageServerFailure(): JSX.Element {
 	
 	return (
 		<>
-			<Head>
+			{/* <Head>
 				<title>{setLocale(router.locale).avangard + ' - 500'}</title>
 			</Head>
-			<ErrorPage error={500} />
+			<ErrorPage error={500} /> */}
 		</>
 	);
 }

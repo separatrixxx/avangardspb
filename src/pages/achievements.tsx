@@ -9,14 +9,14 @@ function Achievements(): JSX.Element {
     
     return (
       <>
-        <Head>
+        {/* <Head>
             <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).achievements}</title>
             <meta name='description' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />
             <meta property='og:title' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />
             <meta property='og:description' content={'Avanfardspb - ' + setLocale(router.locale).achievements} />
             <meta charSet="utf-8" />
         </Head>
-        <AchievementsPage />
+        <AchievementsPage /> */}
       </>
     );
 }

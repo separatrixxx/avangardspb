@@ -9,14 +9,14 @@ function Production(): JSX.Element {
     
     return (
       <>
-        <Head>
+        {/* <Head>
             <title>{setLocale(router.locale).avangard + ' - ' + setLocale(router.locale).production}</title>
             <meta name='description' content={'Avanfardspb - ' + setLocale(router.locale).production} />
             <meta property='og:title' content={'Avanfardspb - ' + setLocale(router.locale).production} />
             <meta property='og:description' content={'Avanfardspb - ' + setLocale(router.locale).production} />
             <meta charSet="utf-8" />
         </Head>
-        <ProductionPage />
+        <ProductionPage /> */}
       </>
     );
 }

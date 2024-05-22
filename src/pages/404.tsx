@@ -9,10 +9,10 @@ function PageNotFound(): JSX.Element {
 
 	return (
 		<>
-			<Head>
+			{/* <Head>
 				<title>{setLocale(router.locale).avangard + ' - 404'}</title>
 			</Head>
-			<ErrorPage error={404} />
+			<ErrorPage error={404} /> */}
 		</>
 	);
 }
